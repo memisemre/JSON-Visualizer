@@ -2,7 +2,9 @@
     width: 500px;
     height: 10vh;
 }
+.second-json-area,
 .json-area {
+    margin: 15px;
     width: 1000px;
     height: 50vh;
     background-color: red;
