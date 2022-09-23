@@ -1,11 +1,46 @@
-.data-area {
-    width: 500px;
-    height: 10vh;
+*{
+    margin: 0;
+    padding: 0;
 }
-.second-json-area,
-.json-area {
-    margin: 15px;
-    width: 1000px;
-    height: 50vh;
-    background-color: red;
+:root{
+    --backgorund--color: #222831;
+    --text--color: #EEEEEE;
+    --textArea--color:#141E61;
+    --outputArea--color: #787A91;
+    --button--color: #30475E;
+}
+body {
+    height: 100vh;
+    background-color: var(--backgorund--color);
+}
+#inputTextArea{
+    background-color: var(--textArea--color);
+    width: 40%;
+    height: 100vh;
+    color: var(--text--color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.btn {
+    color: var(--text--color);
+    background-color: var(--button--color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 20%;
+    height: 100px;
+    font-size: 120%;
+    cursor: pointer;
+}
+.output-area {
+    background-color: var(--outputArea--color);
+    position: absolute;
+    width:40%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    color: var(--text--color);
+    font-size: 30px;
 }

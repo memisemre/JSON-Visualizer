@@ -1,33 +1,21 @@
-const button = document.querySelector('.btn')
-button.addEventListener('click', function(){
-    let dataArea = document.querySelector('.data-area').value;
-    console.log(typeof dataArea)
-    let parseJSON = JSON.parse(dataArea);
-    // let evalDataArea = eval(parseJSON);
-    // console.log(evalDataArea);
-    // console.log(typeof parseJSON)
-    // console.log(typeof parseJSON)
-    // let mapJSON = parseJSON.map(map)
-    // console.log(mapJSON)
-    if (typeof parseJSON == 'object'){
-        for(let key in parseJSON){
-        // let mapJSON = parseJSON.map(key)
-        // console.log(mapJSON)
-        if(parseJSON.hasOwnProperty(key)){
-            let parseJSONKey = parseJSON[key];
-            console.log(typeof parseJSONKey)
-            if (typeof parseJSONKey == 'object'){
-                for(let key in parseJSONKey){
-                    if(parseJSONKey.hasOwnProperty(key)){
-                        console.log(parseJSONKey[key])
-                        document.querySelector('.second-json-area').innerHTML += `${key} : ${parseJSONKey[key]} <br>`
+const convertButton = document.querySelector('.btn');
+convertButton.addEventListener('click',function(){
+    const outputTextArea = document.querySelector('.output-area')
+    const inputTextArea = document.querySelector('#inputTextArea').value;
+    const data = JSON.parse(inputTextArea);
+    for(const [key,value] of Object.entries(data)){
+        if(typeof value === typeof {}){
+            outputTextArea.innerHTML += `${key} </br>`
+            for(const [subKey,subValue] of Object.entries(value)){
+                if(typeof subValue === typeof{}){
+                    for(const [subsubKey,subsubValue] of Object.entries(subValue)){
+                        outputTextArea.innerHTML += `${subsubKey} : ${subsubValue} </br>`
                     }
                 }
-            document.querySelector('.json-area').innerHTML += `${key} : ${parseJSON[key]} <br>`
             }
         }
-    }}
-    else {
-        console.log("hata")
+        else{
+            outputTextArea.innerHTML += `${key} : ${value} </br>`
+        }
     }
 })
