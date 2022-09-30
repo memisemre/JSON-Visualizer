@@ -17,5 +17,5 @@ Technologies I used while developing the project;
 ---
 ## ***To Do***
 ---
-You can see what will be added in future updates from the "todo.md" file.
+You can see what will be added in future updates from the "todo.md" file.  
 [todo.md](https://github.com/memisemre/JSON-Visualizer/blob/main/Todo.md)
