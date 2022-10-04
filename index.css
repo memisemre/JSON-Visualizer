@@ -3,44 +3,67 @@
     padding: 0;
 }
 :root{
-    --backgorund--color: #222831;
+    --backgorund--color: background-color: #74EBD5;
+    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
+    ;
     --text--color: #EEEEEE;
     --textArea--color:#141E61;
     --outputArea--color: #787A91;
     --button--color: #30475E;
+    --content--area--background--color: #2F70AF;
 }
 body {
     height: 100vh;
+    width: 100%;
     background-color: var(--backgorund--color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-#inputTextArea{
-    background-color: var(--textArea--color);
-    width: 40%;
-    height: 100vh;
-    color: var(--text--color);
-    position: absolute;
-    top: 0;
-    left: 0;
+.content-area{
+    width: 70%;
+    height: 75vh;
+    background-color: var(--content--area--background--color);
+    border-radius: 75px;
+    box-shadow: 0px 0px 50px 15px rgba(255,255,255,0.97);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-.btn {
-    color: var(--text--color);
-    background-color: var(--button--color);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 20%;
-    height: 100px;
-    font-size: 120%;
-    cursor: pointer;
+.left-area{
+    width: 25%;
+    height: 70vh;
+    background-color: #75ead5;
+    border-radius: 75px;
+    margin: 2.5vh 0 2.5vh 2.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
-.output-area {
-    background-color: var(--outputArea--color);
-    position: absolute;
-    width:40%;
-    height: 100vh;
-    top: 0;
-    right: 0;
-    color: var(--text--color);
-    font-size: 30px;
+.left-area textarea{
+    width: 80%;
+    border-radius: 75px;
+    height: 60vh;
+    margin-top: 15px;
+}
+.left-area button {
+    width: 50%;
+    height: 5vh;
+    border-radius: 75px;
+    margin-top: 25px;
+}
+.right-area{
+    width: 70%;
+    height: 70vh;
+    background-color: red;
+    margin-left: 2.5vh;
+    overflow: hidden;
+    border-radius: 75px;
+    background-color: #E9E4EA;
+}
+.right-area p{
+    width: 95%;
+    height: 90%;
+    margin: 2.5vh;
 }

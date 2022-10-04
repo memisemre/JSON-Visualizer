@@ -1,21 +1,21 @@
-const convertButton = document.querySelector('.btn');
+const convertButton = document.querySelector('.convert-button');
 convertButton.addEventListener('click',function(){
-    const outputTextArea = document.querySelector('.output-area')
-    const inputTextArea = document.querySelector('#inputTextArea').value;
+    const outputTextArea = document.querySelector('.output-text')
+    const inputTextArea = document.querySelector('.value-area').value;
     const data = JSON.parse(inputTextArea);
      for(const [key,value] of Object.entries(data)){
          if(typeof value === typeof {}){
-             outputTextArea.innerHTML += `${key} area2 </br>`
+             outputTextArea.innerHTML += `${key} = </br>`
              for(const [subKey,subValue] of Object.entries(value)){
                  if(typeof subValue === typeof{}){
                     for(const [subsubKey,subsubValue] of Object.entries(subValue)){
-                         outputTextArea.innerHTML += `${subsubKey} area3 ${subsubValue} </br>`
+                         outputTextArea.innerHTML += `  ${subsubKey} = ${subsubValue} </br>`
                      }
                 }
              }
          }
          else{
-             outputTextArea.innerHTML += `${key} area1 ${value} </br>`
+             outputTextArea.innerHTML += `${key} = ${value} </br>`
              }
         }
     // Object.entries(data).reduce((prev,key,value)=>{
