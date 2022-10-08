@@ -14,8 +14,8 @@ Technologies I used while developing the project;
 ---
 ## ***Change Log***  
 [ChangeLog.md](https://github.com/memisemre/JSON-Visualizer/blob/main/changelog.md)
+
 ---
 ## ***To Do***
----
 You can see what will be added in future updates from the "todo.md" file.  
 [todo.md](https://github.com/memisemre/JSON-Visualizer/blob/main/Todo.md)
